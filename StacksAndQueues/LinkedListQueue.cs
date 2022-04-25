@@ -27,6 +27,18 @@ namespace StacksAndQueues
             }
             Console.WriteLine("{0} inserted into Oueue", node.data);
         }
+       
+        public void Dequeue()
+        {
+            if (head == null)
+            {
+                Console.WriteLine("The Queue is Empty");
+                return;
+            }
+            int deleteNode = head.data;
+            head = head.next;
+            Console.WriteLine("\n {0} is deleted from Queue", deleteNode);
+        }
         internal void Display()
         {
             Node temp = this.head;
